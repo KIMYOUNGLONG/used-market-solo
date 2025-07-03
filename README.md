@@ -1,4 +1,4 @@
-# 🛒 중고시장 솔로 프로젝트 (SpringBoot + PostgreSQL)
+# 🛒 중고마켓 솔로 프로젝트 (SpringBoot + PostgreSQL)
 
 > 이 프로젝트는 Spring Boot 기반의 중고거래 웹 플랫폼을 구현한 개인 클론코딩입니다.  
 > 회원가입, 로그인, 상품 등록/수정/삭제, 댓글 기능 등을 포함합니다.
