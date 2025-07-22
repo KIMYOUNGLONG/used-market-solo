@@ -1,0 +1,40 @@
+body {
+  background-color: #f9f9f9;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.register-container {
+  width: 360px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.register-container h2 {
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.register-container input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.register-container button {
+  background-color: #FF6F0F;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+

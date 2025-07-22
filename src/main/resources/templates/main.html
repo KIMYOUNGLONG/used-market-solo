@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>중고거래 메인</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<header class="top-nav">
+    <div class="logo">
+        <img src="/img/Daangn_Signature_RGB.png" alt="당근로고" />
+    </div>
+    <div class="nav-items">
+        <a href="/">중고거래</a>
+        <input type="text" placeholder="동네 이름을 검색해보세요" />
+        <button>채팅하기</button>
+        <span th:if="${username != null}">
+            <b th:text="${username}">로그인유저</b> 님 환영합니다!
+            <a href="/logout">로그아웃</a>
+        </span>
+        <span th:if="${username == null}">
+            <a href="/login">로그인</a>
+        </span>
+    </div>
+</header>
+
+<main>
+    <section class="welcome">
+        <h2>인기 중고매물</h2>
+
+        <div class="post-container">
+            <!-- ✅ 게시글 반복 -->
+            <div class="post-card" th:each="post : ${posts}">
+                <img th:src="${post.imageUrl}" alt="상품 이미지" />
+                <h3 th:text="${post.title}">제목</h3>
+                <p th:text="${post.price + '원'}">가격</p>
+                <p th:text="${post.location}">지역</p>
+            </div>
+
+            <!-- 게시글이 없는 경우 -->
+            <p th:if="${#lists.isEmpty(posts)}">아직 게시물이 없습니다.</p>
+        </div>
+    </section>
+</main>
+</body>
+</html>

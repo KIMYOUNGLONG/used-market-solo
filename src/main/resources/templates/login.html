@@ -1,0 +1,44 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>로그인 | 중고거래</title>
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+<header class="top-nav">
+    <div class="logo">
+        <img src="/img/Daangn_Signature_RGB.png" alt="당근로고" />
+    </div>
+    <div class="nav-items">
+        <a href="/">중고거래</a>
+        <input type="text" placeholder="동네 이름을 검색해보세요" />
+        <button>채팅하기</button>
+        <button>로그인</button>
+    </div>
+</header>
+
+<main>
+    <div class="login-container">
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="아이디를 입력해주세요" />
+            <input type="password" name="password" placeholder="비밀번호를 입력해주세요" />
+            <button type="submit" class="login-btn">로그인</button>
+        </form>
+
+        <div class="google-login">
+            <a href="/oauth2/authorization/google">
+                <img src="/img/Google_G_logo.png" alt="구글로고" />
+                Google로 로그인
+            </a>
+        </div>
+
+        <div class="bottom-text">
+            <span>당근이와 첫 만남이신가요?</span>
+            <a href="/register">회원가입</a>
+        </div>
+    </div>
+</main>
+</body>
+</html>
